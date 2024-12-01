@@ -5,7 +5,7 @@ import requests
 
 def data_get():
     city = city_name.get()
-    api_key = "f8c21eb7e0c1adea91b757e4dd13ac77"
+    api_key = "Your API key"
     data = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}").json()
     l2.config(text=data["weather"][0]["main"])
     l4.config(text=data["weather"][0]["description"])
